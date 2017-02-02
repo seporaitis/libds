@@ -1,0 +1,25 @@
+-----
+libds
+-----
+
+A datastructure and algorithm library that I wrote to do my Coursera
+homework and as a preparation for interviews.
+
+------------
+How To Build
+------------
+
+Prerequisites:
+
+* https://libcheck.github.io/check/ - A unit testing framework for C.
+
+A barebone autotools set up is used to prepare makefiles. Run:
+
+    autoreconf -i
+    ./configure
+    make
+
+If you'd like to run the test suite:
+
+    make check
+
