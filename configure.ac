@@ -31,6 +31,7 @@ AC_PROG_LIBTOOL
 # See https://www.gnu.org/software/automake/manual/html_node/Requirements.html
 AC_CONFIG_FILES([src/Makefile
                  tests/Makefile
+                 examples/Makefile
                  Makefile])
 
 # Generate the output

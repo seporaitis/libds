@@ -38,6 +38,7 @@ Heap* heap_alloc(int size, heap_pred predicate) {
  * Free the memory.
  */
 void heap_free(Heap **h) {
+    free((*h)->keys);
     free(*h);
     *h = NULL;
 }
@@ -69,8 +70,6 @@ void heapify(Heap *h, int index)
         long int t = h->keys[index];
         h->keys[index] = h->keys[largest];
         h->keys[largest] = t;
-
-        printf("heapify: %d <-> %d\n", h->keys[index], h->keys[largest]);
 
         heapify(h, largest);
     }
